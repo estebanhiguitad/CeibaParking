@@ -8,8 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		2A50774126DD2DF500D0C3B4 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A50773726DD2DF500D0C3B4 /* Domain.framework */; };
-		2A50774626DD2DF500D0C3B4 /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50774526DD2DF500D0C3B4 /* DomainTests.swift */; };
 		2A50774826DD2DF500D0C3B4 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A50773A26DD2DF500D0C3B4 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2A50775826DD36A700D0C3B4 /* VehicleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50775726DD36A700D0C3B4 /* VehicleRepository.swift */; };
+		2A50775B26DD36F400D0C3B4 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50775A26DD36F400D0C3B4 /* Vehicle.swift */; };
+		2A50775E26DD372700D0C3B4 /* BusinessException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50775D26DD372700D0C3B4 /* BusinessException.swift */; };
+		2A50776326DD377600D0C3B4 /* MotorcycleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50776026DD377600D0C3B4 /* MotorcycleService.swift */; };
+		2A50776426DD377600D0C3B4 /* VehicleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50776126DD377600D0C3B4 /* VehicleService.swift */; };
+		2A50776526DD377600D0C3B4 /* CarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50776226DD377600D0C3B4 /* CarService.swift */; };
+		2A50776A26DD380B00D0C3B4 /* CarServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50776726DD380B00D0C3B4 /* CarServiceTest.swift */; };
+		2A50776B26DD380B00D0C3B4 /* MotorcycleServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50776826DD380B00D0C3B4 /* MotorcycleServiceTest.swift */; };
+		2A50776C26DD380B00D0C3B4 /* VehicleServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50776926DD380B00D0C3B4 /* VehicleServiceTest.swift */; };
+		2A50777126DD381900D0C3B4 /* MockVehicleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50776E26DD381900D0C3B4 /* MockVehicleService.swift */; };
+		2A50777226DD381900D0C3B4 /* MockRepositoryVehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50776F26DD381900D0C3B4 /* MockRepositoryVehicle.swift */; };
+		2A50777326DD381900D0C3B4 /* MockMotorcycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50777026DD381900D0C3B4 /* MockMotorcycle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +38,19 @@
 		2A50773A26DD2DF500D0C3B4 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		2A50773B26DD2DF500D0C3B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A50774026DD2DF500D0C3B4 /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A50774526DD2DF500D0C3B4 /* DomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainTests.swift; sourceTree = "<group>"; };
 		2A50774726DD2DF500D0C3B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A50775726DD36A700D0C3B4 /* VehicleRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleRepository.swift; sourceTree = "<group>"; };
+		2A50775A26DD36F400D0C3B4 /* Vehicle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		2A50775D26DD372700D0C3B4 /* BusinessException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessException.swift; sourceTree = "<group>"; };
+		2A50776026DD377600D0C3B4 /* MotorcycleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotorcycleService.swift; sourceTree = "<group>"; };
+		2A50776126DD377600D0C3B4 /* VehicleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleService.swift; sourceTree = "<group>"; };
+		2A50776226DD377600D0C3B4 /* CarService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarService.swift; sourceTree = "<group>"; };
+		2A50776726DD380B00D0C3B4 /* CarServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarServiceTest.swift; sourceTree = "<group>"; };
+		2A50776826DD380B00D0C3B4 /* MotorcycleServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotorcycleServiceTest.swift; sourceTree = "<group>"; };
+		2A50776926DD380B00D0C3B4 /* VehicleServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleServiceTest.swift; sourceTree = "<group>"; };
+		2A50776E26DD381900D0C3B4 /* MockVehicleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockVehicleService.swift; sourceTree = "<group>"; };
+		2A50776F26DD381900D0C3B4 /* MockRepositoryVehicle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockRepositoryVehicle.swift; sourceTree = "<group>"; };
+		2A50777026DD381900D0C3B4 /* MockMotorcycle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMotorcycle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +93,10 @@
 		2A50773926DD2DF500D0C3B4 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				2A50775F26DD377600D0C3B4 /* Services */,
+				2A50775C26DD372700D0C3B4 /* Exception */,
+				2A50775926DD36F400D0C3B4 /* Model */,
+				2A50775626DD368400D0C3B4 /* Repository */,
 				2A50773A26DD2DF500D0C3B4 /* Domain.h */,
 				2A50773B26DD2DF500D0C3B4 /* Info.plist */,
 			);
@@ -80,10 +106,65 @@
 		2A50774426DD2DF500D0C3B4 /* DomainTests */ = {
 			isa = PBXGroup;
 			children = (
-				2A50774526DD2DF500D0C3B4 /* DomainTests.swift */,
+				2A50776D26DD381900D0C3B4 /* Mocks */,
+				2A50776626DD380B00D0C3B4 /* Services */,
 				2A50774726DD2DF500D0C3B4 /* Info.plist */,
 			);
 			path = DomainTests;
+			sourceTree = "<group>";
+		};
+		2A50775626DD368400D0C3B4 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				2A50775726DD36A700D0C3B4 /* VehicleRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		2A50775926DD36F400D0C3B4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2A50775A26DD36F400D0C3B4 /* Vehicle.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2A50775C26DD372700D0C3B4 /* Exception */ = {
+			isa = PBXGroup;
+			children = (
+				2A50775D26DD372700D0C3B4 /* BusinessException.swift */,
+			);
+			path = Exception;
+			sourceTree = "<group>";
+		};
+		2A50775F26DD377600D0C3B4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2A50776026DD377600D0C3B4 /* MotorcycleService.swift */,
+				2A50776126DD377600D0C3B4 /* VehicleService.swift */,
+				2A50776226DD377600D0C3B4 /* CarService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2A50776626DD380B00D0C3B4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2A50776726DD380B00D0C3B4 /* CarServiceTest.swift */,
+				2A50776826DD380B00D0C3B4 /* MotorcycleServiceTest.swift */,
+				2A50776926DD380B00D0C3B4 /* VehicleServiceTest.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2A50776D26DD381900D0C3B4 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				2A50776E26DD381900D0C3B4 /* MockVehicleService.swift */,
+				2A50776F26DD381900D0C3B4 /* MockRepositoryVehicle.swift */,
+				2A50777026DD381900D0C3B4 /* MockMotorcycle.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +228,7 @@
 				TargetAttributes = {
 					2A50773626DD2DF500D0C3B4 = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 					2A50773F26DD2DF500D0C3B4 = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -194,6 +276,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A50776526DD377600D0C3B4 /* CarService.swift in Sources */,
+				2A50776426DD377600D0C3B4 /* VehicleService.swift in Sources */,
+				2A50776326DD377600D0C3B4 /* MotorcycleService.swift in Sources */,
+				2A50775B26DD36F400D0C3B4 /* Vehicle.swift in Sources */,
+				2A50775E26DD372700D0C3B4 /* BusinessException.swift in Sources */,
+				2A50775826DD36A700D0C3B4 /* VehicleRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +289,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A50774626DD2DF500D0C3B4 /* DomainTests.swift in Sources */,
+				2A50777226DD381900D0C3B4 /* MockRepositoryVehicle.swift in Sources */,
+				2A50776C26DD380B00D0C3B4 /* VehicleServiceTest.swift in Sources */,
+				2A50776A26DD380B00D0C3B4 /* CarServiceTest.swift in Sources */,
+				2A50777126DD381900D0C3B4 /* MockVehicleService.swift in Sources */,
+				2A50776B26DD380B00D0C3B4 /* MotorcycleServiceTest.swift in Sources */,
+				2A50777326DD381900D0C3B4 /* MockMotorcycle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +434,7 @@
 		2A50774C26DD2DF500D0C3B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = WR3R42S9ZT;
@@ -357,6 +451,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ceiba.Domain;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +460,7 @@
 		2A50774D26DD2DF500D0C3B4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = WR3R42S9ZT;
@@ -389,6 +485,7 @@
 		2A50774F26DD2DF500D0C3B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WR3R42S9ZT;
 				INFOPLIST_FILE = DomainTests/Info.plist;
@@ -407,6 +504,7 @@
 		2A50775026DD2DF500D0C3B4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WR3R42S9ZT;
 				INFOPLIST_FILE = DomainTests/Info.plist;
