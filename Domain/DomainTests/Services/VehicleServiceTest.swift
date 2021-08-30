@@ -20,7 +20,8 @@ class VehicleServiceTest: XCTestCase {
         //Act
         
         do {
-            try VehicleService(vehicleRepository: mockRepositoryVehicle).saveVehicle(vehicle: vehicle, admintionVehicle: MockMotorcycleService())
+            
+            try VehicleService(vehicleRepository: mockRepositoryVehicle).saveVehicle(vehicle: vehicle, admintionVehicle: MotorcycleService(repositoryVehicle: mockRepositoryVehicle))
             result = true
         } catch  {
             result = false

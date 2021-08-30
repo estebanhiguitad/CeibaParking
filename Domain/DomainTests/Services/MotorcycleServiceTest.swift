@@ -44,7 +44,7 @@ class MotorcycleServiceTest: XCTestCase {
     func test_validateCuantity_validateCuantitySuccess_bool(){
         //Arrange
         
-        let motorcycleService = MockMotorcycleService()
+        let motorcycleService = MotorcycleService(repositoryVehicle: MockRepositoryVehicle())
         let expected = true
         
         var result = false

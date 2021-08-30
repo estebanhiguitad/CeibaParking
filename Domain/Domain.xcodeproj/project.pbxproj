@@ -18,9 +18,7 @@
 		2A50776A26DD380B00D0C3B4 /* CarServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50776726DD380B00D0C3B4 /* CarServiceTest.swift */; };
 		2A50776B26DD380B00D0C3B4 /* MotorcycleServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50776826DD380B00D0C3B4 /* MotorcycleServiceTest.swift */; };
 		2A50776C26DD380B00D0C3B4 /* VehicleServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50776926DD380B00D0C3B4 /* VehicleServiceTest.swift */; };
-		2A50777126DD381900D0C3B4 /* MockVehicleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50776E26DD381900D0C3B4 /* MockVehicleService.swift */; };
 		2A50777226DD381900D0C3B4 /* MockRepositoryVehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50776F26DD381900D0C3B4 /* MockRepositoryVehicle.swift */; };
-		2A50777326DD381900D0C3B4 /* MockMotorcycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50777026DD381900D0C3B4 /* MockMotorcycle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,9 +46,7 @@
 		2A50776726DD380B00D0C3B4 /* CarServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarServiceTest.swift; sourceTree = "<group>"; };
 		2A50776826DD380B00D0C3B4 /* MotorcycleServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotorcycleServiceTest.swift; sourceTree = "<group>"; };
 		2A50776926DD380B00D0C3B4 /* VehicleServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleServiceTest.swift; sourceTree = "<group>"; };
-		2A50776E26DD381900D0C3B4 /* MockVehicleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockVehicleService.swift; sourceTree = "<group>"; };
 		2A50776F26DD381900D0C3B4 /* MockRepositoryVehicle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockRepositoryVehicle.swift; sourceTree = "<group>"; };
-		2A50777026DD381900D0C3B4 /* MockMotorcycle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMotorcycle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,9 +156,7 @@
 		2A50776D26DD381900D0C3B4 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				2A50776E26DD381900D0C3B4 /* MockVehicleService.swift */,
 				2A50776F26DD381900D0C3B4 /* MockRepositoryVehicle.swift */,
-				2A50777026DD381900D0C3B4 /* MockMotorcycle.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -292,9 +286,7 @@
 				2A50777226DD381900D0C3B4 /* MockRepositoryVehicle.swift in Sources */,
 				2A50776C26DD380B00D0C3B4 /* VehicleServiceTest.swift in Sources */,
 				2A50776A26DD380B00D0C3B4 /* CarServiceTest.swift in Sources */,
-				2A50777126DD381900D0C3B4 /* MockVehicleService.swift in Sources */,
 				2A50776B26DD380B00D0C3B4 /* MotorcycleServiceTest.swift in Sources */,
-				2A50777326DD381900D0C3B4 /* MockMotorcycle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
