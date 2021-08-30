@@ -5,57 +5,18 @@
 //  Created by Jeison Andrey Carreño Sánchez - Ceiba Software on 27/08/21.
 //
 
-import Foundation
-public class MotorcycleService{
+public class MotorcycleService: VehicleService{
     
-    private var repositoryVehicle: VehicleRepository
-    
-    public init(repositoryVehicle: VehicleRepository) {
-        
-        self.repositoryVehicle = repositoryVehicle
-        
-    }
-}
-extension MotorcycleService: AdmitionVehicle{
-    
-    public func validateCuantity() -> Bool {
-        
-        return (repositoryVehicle.calculateNumberOfMotorcicles() <= 10)
-        
-    }
-    
-    public func messageErrorLimitVehicles() -> String {
-        
-        return "La moto no puede ingresar. Ya sobrepasamos el limite."
-        
-    }
-    
-    
-}
-
-extension MotorcycleService: FinalizeParking{
-    
-    public func calculateItervalBetwenAdmisionDateToFinalizationDate(date: Date) -> DateComponents {
-        
-        return Calendar.current.dateComponents([.hour, .day], from: date, to: Date())
-        
-    }
-    
-    public func calculateTotal(vehicle: Vehicle) -> Int {
-        
-        let diferenceBetwenDates = calculateItervalBetwenAdmisionDateToFinalizationDate(date: vehicle.getAdmitionDate())
-        let payPerDays = diferenceBetwenDates.day ?? 0 * 8000
-        
-        var payPerHours = 0
-        
-        if (diferenceBetwenDates.hour ?? 0 > 9){
-            payPerHours = 8000
+    public func saveMotorCycle(vehicle: Motorcycle) throws {
+        if self.vehicleRepository.calculateNumberOfMotorcicles() < 10 {
+            do {
+                try self.saveVehicle(vehicle: vehicle)
+            } catch{
+                throw error
+            }
         }else{
-            payPerHours = diferenceBetwenDates.hour! * 1000
+            throw BusinessError.invalidNumberMotorcycles()
         }
-        
-        return payPerDays + payPerHours + ((vehicle.getCylinderCapacity()! > 600) ? 2000 : 0)
-        
     }
     
 }
