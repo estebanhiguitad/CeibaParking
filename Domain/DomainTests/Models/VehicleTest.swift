@@ -50,18 +50,31 @@ class VehicleTest: XCTestCase  {
         
     }
     
-    /*func test_validateLettrByDay_validateLettrByDaySuccess_Bool(){
+    func test_validateLettrByDay_validateLettrByDaySuccess_Bool(){
         //Arrange
         let expected = false
         var result: Bool
-        let vehicle = try! Vehicle(licencePlate: "cbc", admitionDate: Date())
-
+        
         //Act
-        result = vehicle.getTotal()
-
+        do {
+            _ = try Vehicle(licencePlate: "abc", admitionDate: setDate())
+            result = true
+        } catch  {
+            result = false
+        }
+        
         //Assert
         XCTAssertTrue(result == expected)
-        
-    }*/
+    }
+    
+    func setDate() -> Date{
+        let dateString = "2021-08-30 00"
+        let dateStringFormatter = DateFormatter()
+              dateStringFormatter.dateFormat = "yyyy-MM-dd hh"
+        dateStringFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX") as Locale
+        let d = dateStringFormatter.date(from: dateString)!
+        print(Date(timeInterval: 0, since: d))
+        return Date(timeInterval: 0, since: d)
+    }
     
 }
