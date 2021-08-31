@@ -10,10 +10,12 @@ public class Vehicle {
     
     private var licencePlate: String
     private var admitionDate: Date
+    private var typeVehicle: String
     
-    init(licencePlate: String, admitionDate: Date) throws{
+     public init(licencePlate: String, admitionDate: Date, typeVehicle: String) throws{
         self.licencePlate = licencePlate
         self.admitionDate = admitionDate
+        self.typeVehicle = typeVehicle
         
         try validateLettrByDay(licencePlate: licencePlate, admitionDate: admitionDate)
     }
@@ -24,6 +26,10 @@ public class Vehicle {
     
     public func getAdmitionDate() -> Date{
         return self.admitionDate
+    }
+    
+    public func getTypeVehicle() -> String{
+        return self.typeVehicle
     }
     
     private func validateLettrByDay(licencePlate: String, admitionDate: Date) throws{

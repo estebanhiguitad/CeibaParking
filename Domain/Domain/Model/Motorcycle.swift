@@ -10,11 +10,11 @@ public class Motorcycle: Vehicle {
     
     private var cylinderCapacity: Int
     
-    public init(licencePlate: String, admitionDate: Date, cylinderCapacity: Int) throws {
+    public init(licencePlate: String, admitionDate: Date, typeVehicle: String, cylinderCapacity: Int) throws {
         self.cylinderCapacity = cylinderCapacity
         
         do {
-            try super.init(licencePlate: licencePlate, admitionDate: admitionDate)
+            try super.init(licencePlate: licencePlate, admitionDate: admitionDate, typeVehicle: typeVehicle)
         } catch  {
             throw error
         }
