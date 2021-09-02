@@ -14,6 +14,11 @@
 		2A2363CB26DFF2F9000103E0 /* RegisterVehicleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A2363C926DFF2F9000103E0 /* RegisterVehicleViewController.xib */; };
 		2A2363CD26E00C3A000103E0 /* CarPresentationTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2363CC26E00C3A000103E0 /* CarPresentationTranslator.swift */; };
 		2A2363D526E0439D000103E0 /* OptionVehicleEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2363D426E0439D000103E0 /* OptionVehicleEntity.swift */; };
+		2A2363DA26E10DA0000103E0 /* ErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2363D926E10DA0000103E0 /* ErrorExtension.swift */; };
+		2A2363DC26E1126F000103E0 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2363DB26E1126E000103E0 /* DateExtension.swift */; };
+		2A2363DE26E11756000103E0 /* HomeUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2363DD26E11756000103E0 /* HomeUITest.swift */; };
+		2A2363E026E11BD5000103E0 /* RegisterUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2363DF26E11BD5000103E0 /* RegisterUITest.swift */; };
+		2A2363E426E12828000103E0 /* BoucherUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2363E326E12828000103E0 /* BoucherUITest.swift */; };
 		2A5076FE26DD2D9800D0C3B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5076FD26DD2D9800D0C3B4 /* AppDelegate.swift */; };
 		2A50770026DD2D9800D0C3B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5076FF26DD2D9800D0C3B4 /* SceneDelegate.swift */; };
 		2A50770726DD2D9A00D0C3B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A50770626DD2D9A00D0C3B4 /* Assets.xcassets */; };
@@ -82,6 +87,11 @@
 		2A2363C926DFF2F9000103E0 /* RegisterVehicleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterVehicleViewController.xib; sourceTree = "<group>"; };
 		2A2363CC26E00C3A000103E0 /* CarPresentationTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPresentationTranslator.swift; sourceTree = "<group>"; };
 		2A2363D426E0439D000103E0 /* OptionVehicleEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionVehicleEntity.swift; sourceTree = "<group>"; };
+		2A2363D926E10DA0000103E0 /* ErrorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorExtension.swift; sourceTree = "<group>"; };
+		2A2363DB26E1126E000103E0 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		2A2363DD26E11756000103E0 /* HomeUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUITest.swift; sourceTree = "<group>"; };
+		2A2363DF26E11BD5000103E0 /* RegisterUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUITest.swift; sourceTree = "<group>"; };
+		2A2363E326E12828000103E0 /* BoucherUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoucherUITest.swift; sourceTree = "<group>"; };
 		2A5076FA26DD2D9800D0C3B4 /* Presentation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Presentation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A5076FD26DD2D9800D0C3B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A5076FF26DD2D9800D0C3B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -226,6 +236,9 @@
 			children = (
 				2A50771F26DD2D9A00D0C3B4 /* PresentationUITests.swift */,
 				2A50772126DD2D9A00D0C3B4 /* Info.plist */,
+				2A2363DD26E11756000103E0 /* HomeUITest.swift */,
+				2A2363DF26E11BD5000103E0 /* RegisterUITest.swift */,
+				2A2363E326E12828000103E0 /* BoucherUITest.swift */,
 			);
 			path = PresentationUITests;
 			sourceTree = "<group>";
@@ -265,7 +278,6 @@
 			children = (
 				2A2363D326E04364000103E0 /* Entity */,
 				2A2363C026DFC736000103E0 /* Enums */,
-				2AB6B82026DEA4CA00A8D406 /* UITextFieldExtension.swift */,
 				2AB6B82126DEA4CA00A8D406 /* Designable */,
 				2AB6B82326DEA4CA00A8D406 /* Extensions */,
 				2AB6B82526DEA4CA00A8D406 /* Aplication */,
@@ -284,8 +296,11 @@
 		2AB6B82326DEA4CA00A8D406 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				2AB6B82026DEA4CA00A8D406 /* UITextFieldExtension.swift */,
 				2AB6B82426DEA4CA00A8D406 /* UIToolBarExtension.swift */,
 				2A2363C326DFD729000103E0 /* UITexfieldExtension.swift */,
+				2A2363D926E10DA0000103E0 /* ErrorExtension.swift */,
+				2A2363DB26E1126E000103E0 /* DateExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -621,6 +636,8 @@
 				2AB6B84426DEA4CA00A8D406 /* AdmitionVehicleService.swift in Sources */,
 				2AB6B84B26DEA4CA00A8D406 /* RegisterVehicleViewControllerNew.swift in Sources */,
 				2AB6B83F26DEA4CA00A8D406 /* UITexfieldDesignable.swift in Sources */,
+				2A2363DC26E1126F000103E0 /* DateExtension.swift in Sources */,
+				2A2363DA26E10DA0000103E0 /* ErrorExtension.swift in Sources */,
 				2A2363BF26DFAFDD000103E0 /* AdmitionMotorcycleService.swift in Sources */,
 				2AB6B84726DEA4CA00A8D406 /* BoucherViewController.swift in Sources */,
 				2AB6B83B26DEA4CA00A8D406 /* VehiclePresentationTranslator.swift in Sources */,
@@ -648,7 +665,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A2363E426E12828000103E0 /* BoucherUITest.swift in Sources */,
+				2A2363DE26E11756000103E0 /* HomeUITest.swift in Sources */,
 				2A50772026DD2D9A00D0C3B4 /* PresentationUITests.swift in Sources */,
+				2A2363E026E11BD5000103E0 /* RegisterUITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

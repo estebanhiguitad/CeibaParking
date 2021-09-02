@@ -13,6 +13,7 @@ protocol BoucherViewModelProtocols: AnyObject {
     func getPrice(price: Int)
     func getVehiclesOptions(options: [String])
     func getOption(typeName: String)
+    func cleanBoucher()
 }
 
 class BoucherViewModel{
@@ -45,7 +46,14 @@ class BoucherViewModel{
     }
     
     func finalizeService(vehicleEntity: VehicleEntity){
-        try! finalizeService.finalizeService(vehicleEntity: vehicleEntity)
+        do {
+            try finalizeService.finalizeService(vehicleEntity: vehicleEntity)
+            self.viewDelegate?.alert("Servicio finalizado correctamente")
+            self.viewDelegate?.cleanBoucher()
+        } catch  {
+            self.viewDelegate?.alert(error.decriptionMessage())
+        }
+        
     }
     
     func filterOptions(){

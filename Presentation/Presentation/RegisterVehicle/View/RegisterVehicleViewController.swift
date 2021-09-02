@@ -27,7 +27,7 @@ class RegisterVehicleViewController: UIViewController {
     }
     
     @objc func behindDoneAction(_ sender: UITextField) {
-        self.txtDate.text = formatDate()
+        self.txtDate.text = datePicker.date.formatDate()
     }
     
     func setUpView(){
@@ -55,14 +55,6 @@ class RegisterVehicleViewController: UIViewController {
         )
         
         viewModel?.saveVehicle(vehicle: vehicleEntity)
-    }
-    
-    func formatDate() -> String{
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
-        let dateString = dateFormatter.string(from: datePicker.date)
-    
-        return dateString
     }
     
     @IBAction func tapSaveButton(_ sender: Any) {
@@ -94,7 +86,7 @@ class RegisterVehicleViewController: UIViewController {
 extension RegisterVehicleViewController: RegisterVehicleViewModelProtocols{
     
     func alert(_ text: String) {
-        let alert = UIAlertController(title: "Error", message: text, preferredStyle: .alert)
+        let alert = UIAlertController(title: "Alerta", message: text, preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
         self.present(alert, animated: true)

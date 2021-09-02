@@ -29,7 +29,7 @@ class RegisterVehicleViewModel{
             print(error)
             //let newerror = BusinessError.self
             
-            viewDelegate!.alert(getError(error: error))
+            viewDelegate!.alert(error.decriptionMessage())
         }
     }
     
@@ -40,11 +40,5 @@ class RegisterVehicleViewModel{
         case .car:
             admitionService = AdmitionVehicleService()
         }
-    }
-    
-    private func getError(error: Error) -> String{
-        let errorString = String(describing: error)
-        let arrString = errorString.split(separator: "\"")
-        return String(arrString[1])
     }
 }

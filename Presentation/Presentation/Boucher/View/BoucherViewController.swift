@@ -43,7 +43,7 @@ class BoucherViewController: UIViewController {
     func setUpBoucher(vehicleEntity: VehicleEntity) {
         lblPlate.text = vehicleEntity.licencePlate
         lblType.text = vehicleEntity.typeVehicle.rawValue
-        lblInitialDate.text = "\(vehicleEntity.admitionDate)"
+        lblInitialDate.text = "\(vehicleEntity.admitionDate.formatDate())"
         lblTotal.text = "\(vehicleEntity.total)"
     }
 
@@ -66,6 +66,7 @@ class BoucherViewController: UIViewController {
         }
     }
    
+    
     /*
     // MARK: - Navigation
 
@@ -78,6 +79,13 @@ class BoucherViewController: UIViewController {
 
 }
 extension BoucherViewController: BoucherViewModelProtocols{
+    func cleanBoucher() {
+        lblType.text = "....."
+        lblPlate.text = "....."
+        lblInitialDate.text = "....."
+        lblTotal.text = "....."
+        txtLicenceplate.text = ""
+    }
     
     func getOption(typeName: String) {
         txtTypeVehicle.text = typeName
@@ -90,7 +98,10 @@ extension BoucherViewController: BoucherViewModelProtocols{
     }
     
     func alert(_ text: String) {
+        let alert = UIAlertController(title: "Alerta", message: text, preferredStyle: .alert)
         
+        alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
+        self.present(alert, animated: true)
     }
     
     func findVehicle(vehicleEntity: VehicleEntity) {
