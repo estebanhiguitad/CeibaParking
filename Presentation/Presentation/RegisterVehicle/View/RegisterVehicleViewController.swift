@@ -72,8 +72,10 @@ class RegisterVehicleViewController: UIViewController {
     @IBAction func changeValueSegment(_ sender: Any) {
         switch segment.selectedSegmentIndex {
         case 0:
+            txtCylinder.isHidden = false
             typeVehicle = .motorcycle
         default:
+            txtCylinder.isHidden = true
             typeVehicle = .car
         }
     }

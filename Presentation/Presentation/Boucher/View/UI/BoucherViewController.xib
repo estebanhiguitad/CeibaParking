@@ -184,6 +184,9 @@
         </view>
     </objects>
     <designables>
+        <designable name="0AI-xH-Syc">
+            <size key="intrinsicContentSize" width="134" height="34"/>
+        </designable>
         <designable name="a8S-5x-Rux">
             <size key="intrinsicContentSize" width="140.5" height="34"/>
         </designable>

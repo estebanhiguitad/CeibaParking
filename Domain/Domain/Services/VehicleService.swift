@@ -21,7 +21,7 @@ public class VehicleService {
         if vehicleRepository.isExistVehicle(vehicle: vehicle) {
             throw BusinessError.existPlate()
         }
-        
+    
         vehicleRepository.saveVehicle(vehicle: vehicle)
     }
     

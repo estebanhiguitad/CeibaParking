@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import Domain
 protocol RegisterVehicleViewModelProtocols: AnyObject {
     func alert(_ text: String)
 }
@@ -26,7 +26,10 @@ class RegisterVehicleViewModel{
             try admitionService.saveVehicle(vehicleEntity: vehicle)
             viewDelegate?.alert("Vehiculo guardado exitosamente")
         } catch  {
-            viewDelegate!.alert(error.localizedDescription)
+            print(error)
+            //let newerror = BusinessError.self
+            
+            viewDelegate!.alert(getError(error: error))
         }
     }
     
@@ -39,4 +42,9 @@ class RegisterVehicleViewModel{
         }
     }
     
+    private func getError(error: Error) -> String{
+        let errorString = String(describing: error)
+        let arrString = errorString.split(separator: "\"")
+        return String(arrString[1])
+    }
 }

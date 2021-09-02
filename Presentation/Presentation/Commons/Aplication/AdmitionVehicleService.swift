@@ -25,7 +25,10 @@ class AdmitionVehicleService: AdmitionVehicleProtocols {
             vehicle = try vehiclePresentationTranslator.fromPresentationEntityToDomainModel(vehicleEntity: vehicleEntity)
             try VehicleService(vehicleRepository: vehicleRepository).saveVehicle(vehicle: vehicle)
         } catch {
+            print(error)
+            
             throw error
         }
     }
+    
 }
