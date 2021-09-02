@@ -10,15 +10,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterVehicleViewController" customModule="Presentation" customModuleProvider="target">
             <connections>
-                <outlet property="datePicker" destination="Cvl-9d-zXT" id="ytj-Zt-m3W"/>
                 <outlet property="segment" destination="Ega-Ds-d8h" id="hFq-Ja-xbl"/>
                 <outlet property="txtCylinder" destination="KxZ-Lf-HTv" id="bwo-2S-l04"/>
                 <outlet property="txtDate" destination="4pP-ai-iYa" id="1hN-Cl-T55"/>
                 <outlet property="txtLetter" destination="9xJ-Jp-qII" id="pzt-fs-cfd"/>
-                <outlet property="txtLicencePlate" destination="vQM-QV-l8l" id="DB4-mE-LCu"/>
                 <outlet property="txtNumbers" destination="vQM-QV-l8l" id="NPT-Gv-llg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outlet property="viewContentPicker" destination="Fai-mR-VQz" id="XA7-Lp-sC7"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -144,9 +141,6 @@
                             <rect key="frame" x="272" y="0.0" width="30" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Ok"/>
-                            <connections>
-                                <action selector="tapOkPicker:" destination="-1" eventType="touchUpInside" id="5kz-3v-1t8"/>
-                            </connections>
                         </button>
                     </subviews>
                     <viewLayoutGuide key="safeArea" id="mlq-GC-Awi"/>

@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A2363BF26DFAFDD000103E0 /* AdmitionMotorcycleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2363BE26DFAFDD000103E0 /* AdmitionMotorcycleService.swift */; };
+		2A2363C226DFC7CC000103E0 /* TypeVehicleEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2363C126DFC7CC000103E0 /* TypeVehicleEnum.swift */; };
+		2A2363C426DFD729000103E0 /* UITexfieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2363C326DFD729000103E0 /* UITexfieldExtension.swift */; };
+		2A2363CA26DFF2F9000103E0 /* RegisterVehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2363C726DFF2F9000103E0 /* RegisterVehicleViewController.swift */; };
+		2A2363CB26DFF2F9000103E0 /* RegisterVehicleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A2363C926DFF2F9000103E0 /* RegisterVehicleViewController.xib */; };
+		2A2363CD26E00C3A000103E0 /* CarPresentationTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2363CC26E00C3A000103E0 /* CarPresentationTranslator.swift */; };
+		2A2363D526E0439D000103E0 /* OptionVehicleEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2363D426E0439D000103E0 /* OptionVehicleEntity.swift */; };
 		2A5076FE26DD2D9800D0C3B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5076FD26DD2D9800D0C3B4 /* AppDelegate.swift */; };
 		2A50770026DD2D9800D0C3B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5076FF26DD2D9800D0C3B4 /* SceneDelegate.swift */; };
-		2A50770226DD2D9800D0C3B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50770126DD2D9800D0C3B4 /* ViewController.swift */; };
-		2A50770526DD2D9800D0C3B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A50770326DD2D9800D0C3B4 /* Main.storyboard */; };
 		2A50770726DD2D9A00D0C3B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A50770626DD2D9A00D0C3B4 /* Assets.xcassets */; };
 		2A50770A26DD2D9A00D0C3B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A50770826DD2D9A00D0C3B4 /* LaunchScreen.storyboard */; };
 		2A50771526DD2D9A00D0C3B4 /* PresentationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50771426DD2D9A00D0C3B4 /* PresentationTests.swift */; };
@@ -32,8 +37,7 @@
 		2AB6B84726DEA4CA00A8D406 /* BoucherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB6B83126DEA4CA00A8D406 /* BoucherViewController.swift */; };
 		2AB6B84826DEA4CA00A8D406 /* RegisterVehicleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB6B83426DEA4CA00A8D406 /* RegisterVehicleViewModel.swift */; };
 		2AB6B84926DEA4CA00A8D406 /* VehicleEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB6B83626DEA4CA00A8D406 /* VehicleEntity.swift */; };
-		2AB6B84A26DEA4CA00A8D406 /* RegisterVehicleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AB6B83926DEA4CA00A8D406 /* RegisterVehicleViewController.xib */; };
-		2AB6B84B26DEA4CA00A8D406 /* RegisterVehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB6B83A26DEA4CA00A8D406 /* RegisterVehicleViewController.swift */; };
+		2AB6B84B26DEA4CA00A8D406 /* RegisterVehicleViewControllerNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB6B83A26DEA4CA00A8D406 /* RegisterVehicleViewControllerNew.swift */; };
 		2AB6B84D26DEA7C400A8D406 /* MotorcyclePresentationTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB6B84C26DEA7C400A8D406 /* MotorcyclePresentationTranslator.swift */; };
 		345FC35A5FDF6FF2F19F9C32 /* Pods_Presentation_PresentationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70BB3354E77E337ABCA292C5 /* Pods_Presentation_PresentationUITests.framework */; };
 		E1971ACF5135938A05490BDD /* Pods_Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F759358B867AA7BEF00C5E8C /* Pods_Presentation.framework */; };
@@ -71,11 +75,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2A2363BE26DFAFDD000103E0 /* AdmitionMotorcycleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdmitionMotorcycleService.swift; sourceTree = "<group>"; };
+		2A2363C126DFC7CC000103E0 /* TypeVehicleEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeVehicleEnum.swift; sourceTree = "<group>"; };
+		2A2363C326DFD729000103E0 /* UITexfieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITexfieldExtension.swift; sourceTree = "<group>"; };
+		2A2363C726DFF2F9000103E0 /* RegisterVehicleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVehicleViewController.swift; sourceTree = "<group>"; };
+		2A2363C926DFF2F9000103E0 /* RegisterVehicleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterVehicleViewController.xib; sourceTree = "<group>"; };
+		2A2363CC26E00C3A000103E0 /* CarPresentationTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPresentationTranslator.swift; sourceTree = "<group>"; };
+		2A2363D426E0439D000103E0 /* OptionVehicleEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionVehicleEntity.swift; sourceTree = "<group>"; };
 		2A5076FA26DD2D9800D0C3B4 /* Presentation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Presentation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A5076FD26DD2D9800D0C3B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A5076FF26DD2D9800D0C3B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2A50770126DD2D9800D0C3B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2A50770426DD2D9800D0C3B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2A50770626DD2D9A00D0C3B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A50770926DD2D9A00D0C3B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A50770B26DD2D9A00D0C3B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,8 +111,7 @@
 		2AB6B83126DEA4CA00A8D406 /* BoucherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoucherViewController.swift; sourceTree = "<group>"; };
 		2AB6B83426DEA4CA00A8D406 /* RegisterVehicleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVehicleViewModel.swift; sourceTree = "<group>"; };
 		2AB6B83626DEA4CA00A8D406 /* VehicleEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleEntity.swift; sourceTree = "<group>"; };
-		2AB6B83926DEA4CA00A8D406 /* RegisterVehicleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterVehicleViewController.xib; sourceTree = "<group>"; };
-		2AB6B83A26DEA4CA00A8D406 /* RegisterVehicleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVehicleViewController.swift; sourceTree = "<group>"; };
+		2AB6B83A26DEA4CA00A8D406 /* RegisterVehicleViewControllerNew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVehicleViewControllerNew.swift; sourceTree = "<group>"; };
 		2AB6B84C26DEA7C400A8D406 /* MotorcyclePresentationTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcyclePresentationTranslator.swift; sourceTree = "<group>"; };
 		70BB3354E77E337ABCA292C5 /* Pods_Presentation_PresentationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Presentation_PresentationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9856CB615713AC911D8DFF28 /* Pods-Presentation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Presentation.debug.xcconfig"; path = "Target Support Files/Pods-Presentation/Pods-Presentation.debug.xcconfig"; sourceTree = "<group>"; };
@@ -141,6 +149,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A2363C026DFC736000103E0 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				2A2363C126DFC7CC000103E0 /* TypeVehicleEnum.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		2A2363C826DFF2F9000103E0 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2A2363C926DFF2F9000103E0 /* RegisterVehicleViewController.xib */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		2A2363D326E04364000103E0 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				2A2363D426E0439D000103E0 /* OptionVehicleEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		2A5076F126DD2D9800D0C3B4 = {
 			isa = PBXGroup;
 			children = (
@@ -173,8 +205,6 @@
 				2AB6B83226DEA4CA00A8D406 /* RegisterVehicle */,
 				2A5076FD26DD2D9800D0C3B4 /* AppDelegate.swift */,
 				2A5076FF26DD2D9800D0C3B4 /* SceneDelegate.swift */,
-				2A50770126DD2D9800D0C3B4 /* ViewController.swift */,
-				2A50770326DD2D9800D0C3B4 /* Main.storyboard */,
 				2A50770626DD2D9A00D0C3B4 /* Assets.xcassets */,
 				2A50770826DD2D9A00D0C3B4 /* LaunchScreen.storyboard */,
 				2A50770B26DD2D9A00D0C3B4 /* Info.plist */,
@@ -216,6 +246,7 @@
 			children = (
 				2AB6B81B26DEA4CA00A8D406 /* VehiclePresentationTranslator.swift */,
 				2AB6B84C26DEA7C400A8D406 /* MotorcyclePresentationTranslator.swift */,
+				2A2363CC26E00C3A000103E0 /* CarPresentationTranslator.swift */,
 			);
 			path = Anticorruption;
 			sourceTree = "<group>";
@@ -232,6 +263,8 @@
 		2AB6B81F26DEA4CA00A8D406 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				2A2363D326E04364000103E0 /* Entity */,
+				2A2363C026DFC736000103E0 /* Enums */,
 				2AB6B82026DEA4CA00A8D406 /* UITextFieldExtension.swift */,
 				2AB6B82126DEA4CA00A8D406 /* Designable */,
 				2AB6B82326DEA4CA00A8D406 /* Extensions */,
@@ -252,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				2AB6B82426DEA4CA00A8D406 /* UIToolBarExtension.swift */,
+				2A2363C326DFD729000103E0 /* UITexfieldExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -262,6 +296,7 @@
 				2AB6B82626DEA4CA00A8D406 /* FinalizeVehicleService.swift */,
 				2AB6B82726DEA4CA00A8D406 /* Protocols */,
 				2AB6B82A26DEA4CA00A8D406 /* AdmitionVehicleService.swift */,
+				2A2363BE26DFAFDD000103E0 /* AdmitionMotorcycleService.swift */,
 			);
 			path = Aplication;
 			sourceTree = "<group>";
@@ -338,18 +373,11 @@
 		2AB6B83726DEA4CA00A8D406 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2AB6B83826DEA4CA00A8D406 /* UI */,
-				2AB6B83A26DEA4CA00A8D406 /* RegisterVehicleViewController.swift */,
+				2A2363C726DFF2F9000103E0 /* RegisterVehicleViewController.swift */,
+				2A2363C826DFF2F9000103E0 /* UI */,
+				2AB6B83A26DEA4CA00A8D406 /* RegisterVehicleViewControllerNew.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		2AB6B83826DEA4CA00A8D406 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				2AB6B83926DEA4CA00A8D406 /* RegisterVehicleViewController.xib */,
-			);
-			path = UI;
 			sourceTree = "<group>";
 		};
 		C39AF1E9162345587462AF1F /* Pods */ = {
@@ -472,11 +500,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A2363CB26DFF2F9000103E0 /* RegisterVehicleViewController.xib in Resources */,
 				2AB6B84626DEA4CA00A8D406 /* BoucherViewController.xib in Resources */,
 				2A50770A26DD2D9A00D0C3B4 /* LaunchScreen.storyboard in Resources */,
 				2A50770726DD2D9A00D0C3B4 /* Assets.xcassets in Resources */,
-				2A50770526DD2D9800D0C3B4 /* Main.storyboard in Resources */,
-				2AB6B84A26DEA4CA00A8D406 /* RegisterVehicleViewController.xib in Resources */,
 				2AB6B83C26DEA4CA00A8D406 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -583,24 +610,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A2363C426DFD729000103E0 /* UITexfieldExtension.swift in Sources */,
 				2AB6B84226DEA4CA00A8D406 /* FinalizeVehicleProtocols.swift in Sources */,
 				2AB6B84126DEA4CA00A8D406 /* FinalizeVehicleService.swift in Sources */,
 				2AB6B83D26DEA4CA00A8D406 /* HomeViewController.swift in Sources */,
 				2AB6B84026DEA4CA00A8D406 /* UIToolBarExtension.swift in Sources */,
+				2A2363D526E0439D000103E0 /* OptionVehicleEntity.swift in Sources */,
 				2AB6B84826DEA4CA00A8D406 /* RegisterVehicleViewModel.swift in Sources */,
 				2AB6B83E26DEA4CA00A8D406 /* UITextFieldExtension.swift in Sources */,
 				2AB6B84426DEA4CA00A8D406 /* AdmitionVehicleService.swift in Sources */,
-				2AB6B84B26DEA4CA00A8D406 /* RegisterVehicleViewController.swift in Sources */,
+				2AB6B84B26DEA4CA00A8D406 /* RegisterVehicleViewControllerNew.swift in Sources */,
 				2AB6B83F26DEA4CA00A8D406 /* UITexfieldDesignable.swift in Sources */,
+				2A2363BF26DFAFDD000103E0 /* AdmitionMotorcycleService.swift in Sources */,
 				2AB6B84726DEA4CA00A8D406 /* BoucherViewController.swift in Sources */,
 				2AB6B83B26DEA4CA00A8D406 /* VehiclePresentationTranslator.swift in Sources */,
-				2A50770226DD2D9800D0C3B4 /* ViewController.swift in Sources */,
 				2AB6B84926DEA4CA00A8D406 /* VehicleEntity.swift in Sources */,
+				2A2363CD26E00C3A000103E0 /* CarPresentationTranslator.swift in Sources */,
 				2AB6B84526DEA4CA00A8D406 /* BoucherViewModel.swift in Sources */,
 				2AB6B84D26DEA7C400A8D406 /* MotorcyclePresentationTranslator.swift in Sources */,
+				2A2363C226DFC7CC000103E0 /* TypeVehicleEnum.swift in Sources */,
 				2A5076FE26DD2D9800D0C3B4 /* AppDelegate.swift in Sources */,
 				2A50770026DD2D9800D0C3B4 /* SceneDelegate.swift in Sources */,
 				2AB6B84326DEA4CA00A8D406 /* AdmitionVehicleProtocols.swift in Sources */,
+				2A2363CA26DFF2F9000103E0 /* RegisterVehicleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,14 +668,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2A50770326DD2D9800D0C3B4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2A50770426DD2D9800D0C3B4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2A50770826DD2D9A00D0C3B4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

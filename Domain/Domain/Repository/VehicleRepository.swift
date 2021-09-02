@@ -19,4 +19,6 @@ public protocol VehicleRepository{
     
     func finishService(vehicle: Vehicle)
     
+    func searchVehicleByPlate(query: String) -> Vehicle?
+    
 }

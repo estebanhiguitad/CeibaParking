@@ -29,4 +29,7 @@ public class VehicleService {
         vehicleRepository.finishService(vehicle: vehicle)
     }
     
+    public func getVehicleByPlate(plate: String) -> Vehicle?{
+        vehicleRepository.searchVehicleByPlate(query: plate)
+    }
 }

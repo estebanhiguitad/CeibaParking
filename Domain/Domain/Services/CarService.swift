@@ -18,4 +18,8 @@ public class CarService: VehicleService{
             throw BusinessError.invalidNumberCars()
         }
     }
+    
+    public override func getVehicleByPlate(plate: String) -> Car?{
+        vehicleRepository.searchVehicleByPlate(query: plate) as? Car
+    }
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterVehicleViewController: UIViewController {
+class RegisterVehicleViewControllerNew: UIViewController {
 
     @IBOutlet weak var txtCylinder: UITextField!
     @IBOutlet weak var segment: UISegmentedControl!
@@ -29,7 +29,6 @@ class RegisterVehicleViewController: UIViewController {
     @objc func behindDoneAction(_ sender: UITextField) {
         self.txtDate.text = formatDate()
     }
-    
     func setUpView(){
         setUpDatePicker()
         setUpTextfields()
@@ -38,12 +37,11 @@ class RegisterVehicleViewController: UIViewController {
     func setUpDatePicker(){
         datePicker = UIDatePicker(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
         datePicker.preferredDatePickerStyle = .wheels
-        
+//        datePicker.addTarget(self, action: #selector(behindDoneAction), for: .allEvent)
     }
     
     func setUpTextfields(){
         txtDate.inputView = datePicker
-        txtDate.addTarget(self, action: #selector(behindDoneAction), for: .editingDidEnd)
     }
     
     func saveVehicle(){
@@ -58,11 +56,12 @@ class RegisterVehicleViewController: UIViewController {
     }
     
     func formatDate() -> String{
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
-        let dateString = dateFormatter.string(from: datePicker.date)
-    
-        return dateString
+            let dateFormatter = DateFormatter()
+            let dateString = dateFormatter.string(from: datePicker.date)
+        
+            dateFormatter.dateFormat = "yyyy-MM-dd hh:mm"
+        
+            return dateString
     }
     
     @IBAction func tapSaveButton(_ sender: Any) {
@@ -89,7 +88,7 @@ class RegisterVehicleViewController: UIViewController {
     */
 
 }
-extension RegisterVehicleViewController: RegisterVehicleViewModelProtocols{
+extension RegisterVehicleViewControllerNew: RegisterVehicleViewModelProtocols{
     
     func alert(_ text: String) {
         let alert = UIAlertController(title: "Error", message: text, preferredStyle: .alert)

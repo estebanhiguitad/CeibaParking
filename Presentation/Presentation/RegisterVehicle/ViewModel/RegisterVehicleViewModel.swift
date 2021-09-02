@@ -7,13 +7,13 @@
 
 import Foundation
 
-protocol RegisterVehicleViewModelProtocols {
+protocol RegisterVehicleViewModelProtocols: AnyObject {
     func alert(_ text: String)
 }
 class RegisterVehicleViewModel{
     
-    var admitionService: AdmitionVehicleProtocols
-    var viewDelegate: RegisterVehicleViewModelProtocols
+    private var admitionService: AdmitionVehicleProtocols
+    private weak var viewDelegate: RegisterVehicleViewModelProtocols?
     
     init(admitionService: AdmitionVehicleProtocols, viewDelegate: RegisterVehicleViewModelProtocols) {
         self.admitionService = admitionService
@@ -21,15 +21,22 @@ class RegisterVehicleViewModel{
     }
     
     func saveVehicle(vehicle: VehicleEntity){
-        
+        changeAdmitionService(typeVehicle: vehicle.typeVehicle)
         do {
             try admitionService.saveVehicle(vehicleEntity: vehicle)
+            viewDelegate?.alert("Vehiculo guardado exitosamente")
         } catch  {
-            viewDelegate.alert(error.localizedDescription)
+            viewDelegate!.alert(error.localizedDescription)
         }
-        
-        
     }
     
+    func changeAdmitionService(typeVehicle: TypeVehicleEnum){
+        switch typeVehicle {
+        case .motorcycle:
+            admitionService = AdmitionMotorcycleService()
+        case .car:
+            admitionService = AdmitionVehicleService()
+        }
+    }
     
 }

@@ -8,9 +8,9 @@
 import Foundation
 import Domain
 
-class MotorCycleTranslator: VehicleTranslator {
+class MotorcycleTranslator: VehicleTranslator {
     
-    override func fromDatabaseEntityToDomainModel(vehicleEntity: VehicleEntity) -> Motorcycle{
+    func fromDatabaseEntityToDomainModel(vehicleEntity: VehicleEntity) -> Motorcycle{
         
         let vehicle: Motorcycle = try! Motorcycle(
             licencePlate: vehicleEntity.licencePlate,

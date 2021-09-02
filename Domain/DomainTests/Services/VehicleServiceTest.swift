@@ -13,7 +13,7 @@ class VehicleServiceTest: XCTestCase {
     
     func test_saveVehicle_savedSuccess_vehicle(){
         //Arrange
-        let vehicle = try! Vehicle(licencePlate: "", admitionDate: Date())
+        let vehicle = try! Vehicle(licencePlate: "", admitionDate: Date(), typeVehicle: "Moto")
         let expected = true
         var result = false
         let mockRepositoryVehicle: VehicleRepository = MockRepositoryVehicle()
@@ -48,7 +48,7 @@ class VehicleServiceTest: XCTestCase {
     
     func test_finishService_finishServiceSuccess_vehicle() {
         //Arrange
-        let vehicle = try! Vehicle(licencePlate: "", admitionDate: Date())
+        let vehicle = try! Vehicle(licencePlate: "", admitionDate: Date(), typeVehicle: "Moto")
         let mockVehicleRepository = MockRepositoryVehicle()
        
         let expected = true

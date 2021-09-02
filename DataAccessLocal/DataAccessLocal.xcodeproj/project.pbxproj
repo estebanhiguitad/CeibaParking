@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A1D5B8326DE9CCD003A142F /* DataAccessLocal.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A1D5B8126DE9CCD003A142F /* DataAccessLocal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2A2363D026E02DE3000103E0 /* TypeVehicleEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2363CF26E02DE3000103E0 /* TypeVehicleEnum.swift */; };
+		2A2363D226E039D8000103E0 /* CarRepositoryRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2363D126E039D8000103E0 /* CarRepositoryRealm.swift */; };
 		2AB6B80A26DEA17B00A8D406 /* VehicleEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB6B80226DEA17B00A8D406 /* VehicleEntity.swift */; };
 		2AB6B80B26DEA17B00A8D406 /* VehicleRepositoryRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB6B80426DEA17B00A8D406 /* VehicleRepositoryRealm.swift */; };
 		2AB6B80C26DEA17B00A8D406 /* MotorcycleRepositoryRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB6B80526DEA17B00A8D406 /* MotorcycleRepositoryRealm.swift */; };
@@ -37,8 +38,9 @@
 		1C6814FC62531E562A22555C /* Pods_DataAccessLocal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DataAccessLocal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27243AED63887A4CF0189C9A /* Pods-DataAccessLocal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataAccessLocal.release.xcconfig"; path = "Target Support Files/Pods-DataAccessLocal/Pods-DataAccessLocal.release.xcconfig"; sourceTree = "<group>"; };
 		2A1D5B7E26DE9CCD003A142F /* DataAccessLocal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DataAccessLocal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A1D5B8126DE9CCD003A142F /* DataAccessLocal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataAccessLocal.h; sourceTree = "<group>"; };
 		2A1D5B8226DE9CCD003A142F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A2363CF26E02DE3000103E0 /* TypeVehicleEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeVehicleEnum.swift; sourceTree = "<group>"; };
+		2A2363D126E039D8000103E0 /* CarRepositoryRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepositoryRealm.swift; sourceTree = "<group>"; };
 		2AB6B80226DEA17B00A8D406 /* VehicleEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleEntity.swift; sourceTree = "<group>"; };
 		2AB6B80426DEA17B00A8D406 /* VehicleRepositoryRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleRepositoryRealm.swift; sourceTree = "<group>"; };
 		2AB6B80526DEA17B00A8D406 /* MotorcycleRepositoryRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotorcycleRepositoryRealm.swift; sourceTree = "<group>"; };
@@ -83,13 +85,21 @@
 		2A1D5B8026DE9CCD003A142F /* DataAccessLocal */ = {
 			isa = PBXGroup;
 			children = (
+				2A2363CE26E02DA3000103E0 /* Enums */,
 				2AB6B80626DEA17B00A8D406 /* Anticorruption */,
 				2AB6B80126DEA17B00A8D406 /* Entity */,
 				2AB6B80326DEA17B00A8D406 /* Repository */,
-				2A1D5B8126DE9CCD003A142F /* DataAccessLocal.h */,
 				2A1D5B8226DE9CCD003A142F /* Info.plist */,
 			);
 			path = DataAccessLocal;
+			sourceTree = "<group>";
+		};
+		2A2363CE26E02DA3000103E0 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				2A2363CF26E02DE3000103E0 /* TypeVehicleEnum.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		2AB6B80126DEA17B00A8D406 /* Entity */ = {
@@ -105,6 +115,7 @@
 			children = (
 				2AB6B80426DEA17B00A8D406 /* VehicleRepositoryRealm.swift */,
 				2AB6B80526DEA17B00A8D406 /* MotorcycleRepositoryRealm.swift */,
+				2A2363D126E039D8000103E0 /* CarRepositoryRealm.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -145,7 +156,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A1D5B8326DE9CCD003A142F /* DataAccessLocal.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,7 +253,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A2363D026E02DE3000103E0 /* TypeVehicleEnum.swift in Sources */,
 				2AB6B80C26DEA17B00A8D406 /* MotorcycleRepositoryRealm.swift in Sources */,
+				2A2363D226E039D8000103E0 /* CarRepositoryRealm.swift in Sources */,
 				2AB6B80B26DEA17B00A8D406 /* VehicleRepositoryRealm.swift in Sources */,
 				2AB6B80F26DEA17B00A8D406 /* MotorCycleTranslator.swift in Sources */,
 				2AB6B80D26DEA17B00A8D406 /* CarTranslator.swift in Sources */,

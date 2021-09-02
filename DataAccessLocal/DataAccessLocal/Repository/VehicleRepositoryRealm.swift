@@ -13,9 +13,7 @@ public class VehicleRepositoryRealm: VehicleRepository {
     var database : Realm
     
     public init() {
-        
         try! database = Realm()
-        
     }
     
     public func saveVehicle(vehicle: Vehicle) {
@@ -29,7 +27,6 @@ public class VehicleRepositoryRealm: VehicleRepository {
     }
     
     public func isExistVehicle(vehicle: Vehicle) -> Bool {
-        
         let vehicleEntities = database.objects(VehicleEntity.self)
         debugPrint(vehicleEntities)
         
@@ -37,12 +34,12 @@ public class VehicleRepositoryRealm: VehicleRepository {
     }
     
     public func getVehicles() -> [Vehicle] {
-        
         let vehicleEntities = database.objects(VehicleEntity.self)
         let vehicleTranslator: VehicleTranslator = VehicleTranslator()
        
-        return vehicleEntities.map({vehicleTranslator.fromDatabaseEntityToDomainModel(vehicleEntity: $0)})
-        
+        return vehicleEntities.map({
+            vehicleTranslator.fromDatabaseEntityToDomainModel(vehicleEntity: $0)
+        })
     }
     
     public func calculatePrice(vehicle: Vehicle) -> String {
@@ -54,37 +51,34 @@ public class VehicleRepositoryRealm: VehicleRepository {
     }
     
     public func calculateNumberOfMotorcicles() -> Int {
-        
         return database.objects(VehicleEntity.self).filter("typeVehicle == \"Moto\"").count
     }
     
     public func calculateNumberOfCars() -> Int {
-        
         return database.objects(VehicleEntity.self).filter("typeVehicle == \"Carro\"").count
     }
     
     public func finishService(vehicle: Vehicle) {
-        
         if let vehicleEntity = self.getVehicleByPlate(vehicle: vehicle){
-            
             try! database.write {
-                
                 database.delete(vehicleEntity)
-                
             }
-            
         }
-        
     }
     
-    
     private func getVehicleByPlate(vehicle: Vehicle) -> VehicleEntity? {
-        
         let vehicleEntities = database.objects(VehicleEntity.self)
         debugPrint(vehicleEntities)
         
         return (database.objects(VehicleEntity.self).filter("licencePlate == \"\(vehicle.getLicencePlate())\"").first)
     }
+
+    public func searchVehicleByPlate(query: String) -> Vehicle? {
+        if let vehicleEntity = (database.objects(VehicleEntity.self).filter("licencePlate == \"\(query)\"").first){
+            return VehicleTranslator().fromDatabaseEntityToDomainModel(vehicleEntity: vehicleEntity)
+        }
+        
+        return nil
+    }
     
 }
-

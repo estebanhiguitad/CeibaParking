@@ -6,46 +6,58 @@
 //
 
 import Foundation
-import Foundation
 
-protocol BoucherViewModelProtocols {
+protocol BoucherViewModelProtocols: AnyObject {
     func alert(_ text: String)
     func findVehicle(vehicleEntity: VehicleEntity)
     func getPrice(price: Int)
+    func getVehiclesOptions(options: [String])
+    func getOption(typeName: String)
 }
+
 class BoucherViewModel{
     
     var finalizeService: FinalizeVehicleService
-    var viewDelegate: BoucherViewModelProtocols
+    private weak var viewDelegate: BoucherViewModelProtocols?
     var vehicles: [VehicleEntity]!
+    private var optionsVehicles = [OptionVehicleEntity]()
+    private var optioSelected: OptionVehicleEntity!
     
     init(finalizeService: FinalizeVehicleService, viewDelegate: BoucherViewModelProtocols) {
-        
         self.finalizeService = finalizeService
         self.viewDelegate = viewDelegate
-        
+        getOptionsVehicles()
     }
     
     func getVehicles(){
-        
         vehicles = try! finalizeService.getVehicles()
-        
     }
     
     func searchVehicle(query: String){
-        
-        if let vehicleEntity = vehicles.first(where: {$0.licencePlate == query}){
-            
-            viewDelegate.findVehicle(vehicleEntity: vehicleEntity)
-            
+        if let vehicleEntity = finalizeService.getVehicleByPlate(optionVehicleEntity: optioSelected, plate: query){
+            viewDelegate!.findVehicle(vehicleEntity: vehicleEntity)
         }
-        
+    }
+    
+    func getOptionsVehicles(){
+        optionsVehicles = self.finalizeService.getOptionsVehicles()
+        filterOptions()
     }
     
     func finalizeService(vehicleEntity: VehicleEntity){
-        
         try! finalizeService.finalizeService(vehicleEntity: vehicleEntity)
-        
+    }
+    
+    func filterOptions(){
+        let listOptionsNames = optionsVehicles.map({$0.name.rawValue})
+        viewDelegate?.getVehiclesOptions(options: listOptionsNames)
+    }
+    
+    
+    
+    func setOption(index: Int){
+        optioSelected = optionsVehicles[index]
+        viewDelegate?.getOption(typeName: optioSelected.name.rawValue)
     }
     
 }

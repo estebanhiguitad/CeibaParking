@@ -52,4 +52,8 @@ class MockRepositoryVehicle: VehicleRepository{
         return false
     }
     
+    func searchVehicleByPlate(query: String) -> Vehicle? {
+        return nil
+    }
+    
 }

@@ -7,16 +7,16 @@
 
 public class MotorcycleService: VehicleService{
     
-    public func saveMotorCycle(vehicle: Motorcycle) throws {
+    public override func saveVehicle(vehicle: Vehicle) throws {
         if self.vehicleRepository.calculateNumberOfMotorcicles() < 10 {
-            do {
-                try self.saveVehicle(vehicle: vehicle)
-            } catch{
-                throw error
-            }
+            self.vehicleRepository.saveVehicle(vehicle: vehicle as! Motorcycle )
         }else{
             throw BusinessError.invalidNumberMotorcycles()
         }
+    }
+    
+    public override func getVehicleByPlate(plate: String) -> Motorcycle?{
+        vehicleRepository.searchVehicleByPlate(query: plate) as? Motorcycle
     }
     
 }

@@ -7,7 +7,6 @@
 
 import UIKit
 import Domain
-import DataAccessLocal
 
 class HomeViewController: UIViewController {
 
@@ -21,9 +20,12 @@ class HomeViewController: UIViewController {
         setUpView()
     }
     
+    
     func setUpView(){
-        changeViewInContainerView(viewController: RegisterVehicleViewController())
+        
         inflateContainerButtons()
+        tabBar.selectedItem = containerButtons[0].tabItem
+        changeViewInContainerView(viewController: containerButtons[0].controller)
     }
     
     func changeViewInContainerView(viewController: UIViewController){
@@ -36,7 +38,6 @@ class HomeViewController: UIViewController {
     }
     
     func removeSubviewFromContainerView(parentView: UIView) -> UIView{
-        parentView.subviews.forEach({ $0.removeFromSuperview() })
         
         return parentView
     }

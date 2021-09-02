@@ -44,7 +44,7 @@ public class Vehicle {
     private func getNumberDay(date: Date) -> Int{
         let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "D"
-        let index = Calendar.current.component(.weekday, from: Date()) - 1// this returns an Int
+        let index = Calendar.current.component(.weekday, from: date) - 1// this returns an Int
         return index
     }
     

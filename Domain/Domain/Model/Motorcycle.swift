@@ -24,6 +24,7 @@ public class Motorcycle: Vehicle {
         return self.cylinderCapacity
     }
     
+    
     public func calculateTotal() -> Int {
         
         let totalValue = super.calculateTotal(pricePerDays: 4000, pricePerHours: 500)

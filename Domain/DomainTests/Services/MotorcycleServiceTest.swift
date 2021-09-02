@@ -15,7 +15,7 @@ class MotorcycleServiceTest: XCTestCase {
         //Arrange
         
         let motorcycleService = MotorcycleService(vehicleRepository: MockRepositoryVehicle())
-        let vehicle: Vehicle = try! Vehicle(licencePlate: "bbc", admitionDate: Date())
+        let vehicle: Vehicle = try! Motorcycle(licencePlate: "bbc", admitionDate: Date(), typeVehicle: "Moto", cylinderCapacity: 200)
         let expected = true
         
         var result = false

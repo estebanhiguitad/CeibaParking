@@ -11,31 +11,26 @@ import Domain
 class VehiclePresentationTranslator {
     
     func fromDomainToPresentationEntity(vehicle: Vehicle) -> VehicleEntity{
-        
         let vehicleEntityicle: VehicleEntity = VehicleEntity(
             licencePlate: vehicle.getLicencePlate(),
             admitionDate: vehicle.getAdmitionDate(),
-            typeVehicle: vehicle.getTypeVehicle()
+            typeVehicle: TypeVehicleEnum(rawValue: vehicle.getTypeVehicle())!
         )
         
         return vehicleEntityicle
-        
     }
 
     func fromPresentationEntityToDomainModel(vehicleEntity: VehicleEntity) throws -> Vehicle{
-        
         var vehicle: Vehicle!
         
         do {
             vehicle = try Vehicle(
                 licencePlate: vehicleEntity.licencePlate,
                 admitionDate: vehicleEntity.admitionDate,
-                typeVehicle: vehicleEntity.typeVehicle
+                typeVehicle: vehicleEntity.typeVehicle.rawValue
             )
         } catch  {
-            
-          throw error
-            
+            throw error
         }
         
         return vehicle

@@ -9,9 +9,9 @@ import Domain
 
 class VehicleTranslator {
     
-    func fromDatabaseEntityToDomainModel(vehicleEntity: VehicleEntity) -> Vehicle{
+    func fromDatabaseEntityToDomainModel(vehicleEntity: VehicleEntity) -> Car{
         
-        let vehicle: Vehicle = try! Vehicle(
+        let vehicle: Car = try! Car(
             licencePlate: vehicleEntity.licencePlate,
             admitionDate: vehicleEntity.admitionDate,
             typeVehicle: vehicleEntity.typeVehicle

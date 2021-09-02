@@ -11,7 +11,9 @@ struct VehicleEntity {
     
     var licencePlate: String
     var admitionDate: Date
-    var typeVehicle: String
+    var typeVehicle: TypeVehicleEnum
     var cylinderCapacity: Int?
+    var total: Int = 0
     
+   
 }

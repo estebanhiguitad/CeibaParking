@@ -12,7 +12,7 @@ class VehicleTest: XCTestCase  {
         //Arrange
         let expected = "cbc"
         var result = ""
-        let vehicle = try! Vehicle(licencePlate: expected, admitionDate: Date())
+        let vehicle = try! Vehicle(licencePlate: expected, admitionDate: Date(), typeVehicle: "Moto")
 
         //Act
         result = vehicle.getLicencePlate()
@@ -26,7 +26,7 @@ class VehicleTest: XCTestCase  {
         //Arrange
         let expected = Date()
         var result: Date
-        let vehicle = try! Vehicle(licencePlate: "cbc", admitionDate: expected)
+        let vehicle = try! Vehicle(licencePlate: "cbc", admitionDate: expected, typeVehicle: "Moto")
 
         //Act
         result = vehicle.getAdmitionDate()
@@ -40,7 +40,7 @@ class VehicleTest: XCTestCase  {
         //Arrange
         let expected = 0
         var result: Int
-        let vehicle = try! Vehicle(licencePlate: "cbc", admitionDate: Date())
+        let vehicle = try! Vehicle(licencePlate: "cbc", admitionDate: Date(), typeVehicle: "Moto")
 
         //Act
         result = vehicle.calculateTotal(pricePerDays: 8000, pricePerHours: 1000)
@@ -57,7 +57,7 @@ class VehicleTest: XCTestCase  {
         
         //Act
         do {
-            _ = try Vehicle(licencePlate: "abc", admitionDate: setDate())
+            _ = try Vehicle(licencePlate: "abc", admitionDate: setDate(), typeVehicle: "Moto")
             result = true
         } catch  {
             result = false

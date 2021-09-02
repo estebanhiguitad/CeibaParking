@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import Domain
+
 protocol  FinalizeVehicleProtocols {
     
     var vehiclePresentationTranslator: VehiclePresentationTranslator { get set }
@@ -14,5 +16,9 @@ protocol  FinalizeVehicleProtocols {
     
     func finalizeService(vehicleEntity: VehicleEntity) throws
     
+    func getTypeVehicle(vehicle: Vehicle) -> VehicleEntity
     
+    func getOptionsVehicles() -> [OptionVehicleEntity]
+    
+    func getVehicleByPlate(optionVehicleEntity: OptionVehicleEntity, plate: String) -> VehicleEntity?
 }
