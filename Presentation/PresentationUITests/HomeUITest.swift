@@ -38,9 +38,15 @@ class HomeUITest: XCTestCase {
         
     }
     
-    func testTabBar(){
-        let tabBar = XCUIApplication().tabBars["Tab Bar"]
-        tabBar.buttons["Facturar"].tap()
-        tabBar.buttons["Registrar"].tap()
+    func testTabBarBoucher(){
+        
+        HomeScreenObject(app: XCUIApplication()).tapBoucherButton()
+    
+    }
+    
+    func testTabBarRegister(){
+        
+        HomeScreenObject(app: XCUIApplication()).tapBoucherButton()
+    
     }
 }

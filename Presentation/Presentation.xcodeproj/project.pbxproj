@@ -19,6 +19,10 @@
 		2A2363DE26E11756000103E0 /* HomeUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2363DD26E11756000103E0 /* HomeUITest.swift */; };
 		2A2363E026E11BD5000103E0 /* RegisterUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2363DF26E11BD5000103E0 /* RegisterUITest.swift */; };
 		2A2363E426E12828000103E0 /* BoucherUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2363E326E12828000103E0 /* BoucherUITest.swift */; };
+		2A2363E726E17ECA000103E0 /* RegisterScreenObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2363E626E17ECA000103E0 /* RegisterScreenObject.swift */; };
+		2A2363EA26E17F3A000103E0 /* ScreenProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2363E926E17F3A000103E0 /* ScreenProtocols.swift */; };
+		2A2363EC26E1CB46000103E0 /* HomeScreenObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2363EB26E1CB46000103E0 /* HomeScreenObject.swift */; };
+		2A2363EE26E1D067000103E0 /* BoucherScreenObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2363ED26E1D067000103E0 /* BoucherScreenObject.swift */; };
 		2A5076FE26DD2D9800D0C3B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5076FD26DD2D9800D0C3B4 /* AppDelegate.swift */; };
 		2A50770026DD2D9800D0C3B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5076FF26DD2D9800D0C3B4 /* SceneDelegate.swift */; };
 		2A50770726DD2D9A00D0C3B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A50770626DD2D9A00D0C3B4 /* Assets.xcassets */; };
@@ -92,6 +96,10 @@
 		2A2363DD26E11756000103E0 /* HomeUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUITest.swift; sourceTree = "<group>"; };
 		2A2363DF26E11BD5000103E0 /* RegisterUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUITest.swift; sourceTree = "<group>"; };
 		2A2363E326E12828000103E0 /* BoucherUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoucherUITest.swift; sourceTree = "<group>"; };
+		2A2363E626E17ECA000103E0 /* RegisterScreenObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreenObject.swift; sourceTree = "<group>"; };
+		2A2363E926E17F3A000103E0 /* ScreenProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenProtocols.swift; sourceTree = "<group>"; };
+		2A2363EB26E1CB46000103E0 /* HomeScreenObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenObject.swift; sourceTree = "<group>"; };
+		2A2363ED26E1D067000103E0 /* BoucherScreenObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoucherScreenObject.swift; sourceTree = "<group>"; };
 		2A5076FA26DD2D9800D0C3B4 /* Presentation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Presentation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A5076FD26DD2D9800D0C3B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A5076FF26DD2D9800D0C3B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -183,6 +191,24 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		2A2363E526E17EA6000103E0 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				2A2363E626E17ECA000103E0 /* RegisterScreenObject.swift */,
+				2A2363EB26E1CB46000103E0 /* HomeScreenObject.swift */,
+				2A2363ED26E1D067000103E0 /* BoucherScreenObject.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		2A2363E826E17F26000103E0 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2A2363E926E17F3A000103E0 /* ScreenProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		2A5076F126DD2D9800D0C3B4 = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +260,8 @@
 		2A50771E26DD2D9A00D0C3B4 /* PresentationUITests */ = {
 			isa = PBXGroup;
 			children = (
+				2A2363E826E17F26000103E0 /* Protocols */,
+				2A2363E526E17EA6000103E0 /* Objects */,
 				2A50771F26DD2D9A00D0C3B4 /* PresentationUITests.swift */,
 				2A50772126DD2D9A00D0C3B4 /* Info.plist */,
 				2A2363DD26E11756000103E0 /* HomeUITest.swift */,
@@ -665,9 +693,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A2363E726E17ECA000103E0 /* RegisterScreenObject.swift in Sources */,
+				2A2363EA26E17F3A000103E0 /* ScreenProtocols.swift in Sources */,
 				2A2363E426E12828000103E0 /* BoucherUITest.swift in Sources */,
+				2A2363EE26E1D067000103E0 /* BoucherScreenObject.swift in Sources */,
 				2A2363DE26E11756000103E0 /* HomeUITest.swift in Sources */,
 				2A50772026DD2D9A00D0C3B4 /* PresentationUITests.swift in Sources */,
+				2A2363EC26E1CB46000103E0 /* HomeScreenObject.swift in Sources */,
 				2A2363E026E11BD5000103E0 /* RegisterUITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

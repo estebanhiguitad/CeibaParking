@@ -27,22 +27,27 @@ class BoucherUITest: XCTestCase {
 
     func testFinalizeParkingByMotorcycle(){
         let app = XCUIApplication()
-        app.tabBars["Tab Bar"].buttons["Facturar"].tap()
-        app.textFields["Buscar placa"].tap()
-        app.scrollViews.otherElements.textFields["Letras placa"].tap()
-        app.scrollViews.otherElements.textFields["Letras placa"].tap()
+        
+        _ = HomeScreenObject(app: app).tapBoucherButton()
+        
+        _ = BoucherScreenObject(app: app)
+            .tapTypeVehicleTextField()
+            .tapPickerWheels("Moto")
+            .tapSearchPlateTextField("abc123")
+            .tapFinalizeButton()
         
     }
     
     func testFinalizeParkingByCar(){
-        
         let app = XCUIApplication()
-        app.tabBars["Tab Bar"].buttons["Facturar"].tap()
-        app.textFields["Tipo de vehículo"].tap()
-        app/*@START_MENU_TOKEN@*/.pickerWheels["Moto"]/*[[".pickers.pickerWheels[\"Moto\"]",".pickerWheels[\"Moto\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.swipeUp()
-        app.toolbars["Toolbar"].buttons["Done"].tap()
-        app.textFields["Buscar placa"].tap()
-        app.scrollViews.otherElements.textFields["Letras placa"].tap()
+        
+        _ = HomeScreenObject(app: app).tapBoucherButton()
+        
+        _ = BoucherScreenObject(app: app)
+            .tapTypeVehicleTextField()
+            .tapPickerWheelsDown("Moto")
+            .tapSearchPlateTextField("abb123")
+            .tapFinalizeButton()
         
     }
 }

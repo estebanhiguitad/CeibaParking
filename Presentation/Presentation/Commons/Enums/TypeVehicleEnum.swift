@@ -8,5 +8,5 @@
 import Foundation
 enum TypeVehicleEnum: String {
     case motorcycle = "Moto"
-    case car = "Car"
+    case car = "Carro"
 }

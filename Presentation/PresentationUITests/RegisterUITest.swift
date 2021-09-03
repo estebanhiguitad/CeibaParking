@@ -26,52 +26,17 @@ class RegisterUITest: XCTestCase {
     }
 
     func testRegisterFormMotorcycle(){
-        let app = XCUIApplication()
-        app/*@START_MENU_TOKEN@*/.segmentedControls/*[[".scrollViews.segmentedControls",".segmentedControls"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.buttons["Moto"].tap()
-        
-        let elementsQuery = app.scrollViews.otherElements
-        let cilindrajeTextField = elementsQuery.textFields["Clindraje"]
-        cilindrajeTextField.tap()
-        cilindrajeTextField.typeText("700")
-        
-        let nMeroPlacaTextField = elementsQuery.textFields["Número placa"]
-        nMeroPlacaTextField.tap()
-        nMeroPlacaTextField.typeText("123")
-        
-        let letrasPlacaTextField = elementsQuery.textFields["Letras placa"]
-        letrasPlacaTextField.tap()
-        letrasPlacaTextField.typeText("abc")
-        
-        let fechaIngresoTextField = elementsQuery.textFields["Fecha ingreso"]
-        fechaIngresoTextField.tap()
-        
-        app.toolbars["Toolbar"].buttons["Done"].tap()
-        app/*@START_MENU_TOKEN@*/.buttons["Guardar"]/*[[".scrollViews.buttons[\"Guardar\"]",".buttons[\"Guardar\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.staticTexts["Guardar"].tap()
-        app.alerts["Alerta"].scrollViews.otherElements.buttons["Aceptar"].tap()
-               
+        RegisterScreenObject(app: XCUIApplication()).tapSegment("Moto").typeCylinder("600").typeLettersPlateTextField("abc")
+            .typeNumberPlateTextField("123")
+            .typeAdmitionDateTextField()
+            .tapSave()
     }
     
     func testRegisterFormCar(){
-        
-        let app = XCUIApplication()
-        app/*@START_MENU_TOKEN@*/.segmentedControls/*[[".scrollViews.segmentedControls",".segmentedControls"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.buttons["Carro"].tap()
-        
-        let elementsQuery = app.scrollViews.otherElements
-        let nMeroPlacaTextField = elementsQuery.textFields["Número placa"]
-        nMeroPlacaTextField.typeText("123")
-        nMeroPlacaTextField.tap()
-        
-        let letrasPlacaTextField = elementsQuery.textFields["Letras placa"]
-        letrasPlacaTextField.tap()
-        letrasPlacaTextField.typeText("abb")
-        
-        let fechaIngresoTextField = elementsQuery.textFields["Fecha ingreso"]
-        fechaIngresoTextField.tap()
-        
-        app.toolbars["Toolbar"].buttons["Done"].tap()
-        app/*@START_MENU_TOKEN@*/.buttons["Guardar"]/*[[".scrollViews.buttons[\"Guardar\"]",".buttons[\"Guardar\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.staticTexts["Guardar"].tap()
-        app.alerts["Alerta"].scrollViews.otherElements.buttons["Aceptar"].tap()
-        
+        RegisterScreenObject(app: XCUIApplication()).tapSegment("Carro").typeLettersPlateTextField("abc")
+            .typeNumberPlateTextField("123")
+            .typeAdmitionDateTextField()
+            .tapSave()
     }
-
+    
 }
