@@ -1,8 +1,6 @@
 pipeline {
   //Donde se va a ejecutar el Pipeline
-  agent {
-    label 'Slave_Mac'
-  }
+  agent any
 
   //Opciones específicas de Pipeline dentro del Pipeline
   options {
@@ -16,7 +14,7 @@ pipeline {
     stage('Compile') {
         steps {
             echo "------------>Compile<------------"
-            
+            sh 'pod install'
             sh 'xcodebuild -scheme Presentation clean build CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED="NO"'
         }
     }
@@ -24,16 +22,15 @@ pipeline {
     stage('Unit Tests') {
         steps{
             echo "------------>Unit Tests<------------"
-            sh "xcodebuild test -project Domain/Domain.xcodeproj -scheme DomainTests -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8,OS=14.5'"
+            sh "xcodebuild test -project Domain/Domain.xcodeproj -scheme DomainTests -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=latest'"
         }
     }
 
     stage('Static Code Analysis') {
       steps{
         echo '------------>Análisis estático de codigo<------------'
-        sh 'swiftlint lint > swiftlint.txt || true'
         withSonarQubeEnv('Sonar') {
-            sh "${tool name: 'SonarScanner-Mac', type:'hudson.plugins.sonar.SonarRunnerInstallation'}/bin/sonar-scanner -Dsonar.swift.swiftlint.report=swiftlint.txt -Dproject.settings=sonar-project.properties"
+            sh "sonar-scanner -Dproject.settings=sonar-project.properties"
         }
       }
     }
