@@ -88,3 +88,6 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+sonar-reports/coverage-swift.xml
+sonar-reports/TEST-report.xml
+sonar-reports/xcodebuild.log
