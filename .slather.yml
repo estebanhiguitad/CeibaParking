@@ -6,6 +6,8 @@ source_directory:
 binary_basename:
   - Domain
   - Presentation
+ignore:
+  - DataAccessLocal
 
 workspace: CeibaParking.xcworkspace
 scheme: Presentation

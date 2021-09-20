@@ -22,13 +22,13 @@ pipeline {
         steps{
             echo "------------>Unit Tests<------------"
             sh "xcodebuild test -scheme Domain -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=latest'"
+            sh '/opt/sonarswift/run-sonar-swift.sh'
         }
     }
 
     stage('Static Code Analysis') {
       steps{
         echo '------------>Análisis estático de codigo<------------'
-        sh '/opt/sonarswift/run-sonar-swift.sh'
         withSonarQubeEnv('Sonar') {
             sh "sonar-scanner -Dproject.settings=sonar-project.properties"
         }
