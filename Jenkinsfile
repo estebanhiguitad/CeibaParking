@@ -29,7 +29,6 @@ pipeline {
       steps{
         echo '------------>Análisis estático de codigo<------------'
         sh '/opt/sonarswift/run-sonar-swift.sh'
-        sh 'cp sonar-reports/coverage-swift.xml ./'
         withSonarQubeEnv('Sonar') {
             sh "sonar-scanner -Dproject.settings=sonar-project.properties"
         }
