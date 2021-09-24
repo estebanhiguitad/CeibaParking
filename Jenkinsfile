@@ -1,6 +1,8 @@
 pipeline {
   //Donde se va a ejecutar el Pipeline
-  agent any
+  agent {
+    label 'Slave_Mac'
+  }
 
   //Opciones específicas de Pipeline dentro del Pipeline
   options {
