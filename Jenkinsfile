@@ -24,7 +24,7 @@ pipeline {
         steps{
             echo "------------>Unit Tests<------------"
             sh "xcodebuild test -scheme Domain -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=latest'"
-            sh '/opt/sonarswift/run-sonar-swift.sh'
+            sh 'run-sonar-swift.sh'
         }
     }
 
@@ -32,7 +32,7 @@ pipeline {
       steps{
         echo '------------>Análisis estático de codigo<------------'
         withSonarQubeEnv('Sonar') {
-            sh "sonar-scanner -Dproject.settings=sonar-project.properties"
+            sh "${tool name: 'SonarScanner-Mac', type:'hudson.plugins.sonar.SonarRunnerInstallation'}/bin/sonar-scanner"
         }
       }
     }
