@@ -1,8 +1,6 @@
 pipeline {
   //Donde se va a ejecutar el Pipeline
-  agent {
-    label 'Slave_Mac'
-  }
+  agent  any
 
   //Opciones específicas de Pipeline dentro del Pipeline
   options {
@@ -24,7 +22,7 @@ pipeline {
         steps{
             echo "------------>Unit Tests<------------"
             sh "xcodebuild test -scheme Domain -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=latest'"
-            sh 'run-sonar-swift.sh'
+            sh '/opt/sonarswift/run-sonar-swift.sh'
         }
     }
 
