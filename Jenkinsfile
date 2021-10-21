@@ -1,7 +1,7 @@
 pipeline {
   //Donde se va a ejecutar el Pipeline
   agent  {
-    label 'Slave-Mac'
+    label 'Slave_Mac'
   }
 
   //Opciones específicas de Pipeline dentro del Pipeline
